@@ -1,0 +1,20 @@
+! ========================================
+! Cisco IOS Bulk Configuration Script
+! Generated on: 2026-10-01 16:14:15
+! ========================================
+
+configure terminal
+
+!
+! --- VLAN CONFIGURATION ---
+vlan 10
+ name name_10
+!
+! --- ACCESS PORTS ---
+interface range GigabitEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 1
+ no shutdown
+
+end
+write memory
